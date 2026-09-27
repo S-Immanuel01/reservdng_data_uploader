@@ -1,0 +1,1764 @@
+[
+  {
+    "name": "Eko Hotels & Suites",
+    "rating": 4,
+    "highlight": "Perched on the prestigious Victoria Island and overlooking the breathtaking Eko Atlantic City and the Atlantic Ocean, Eko Hotels & Suites is West Africa&#39;s most iconic five-star destination. Our four distinctive properties — Eko Gardens, Eko Hotel, Eko Suites, and Eko Signature — offer an unmatched blend of comfort, elegance, and African warmth. Guests are treated to world-class dining across multiple restaurants, rejuvenating spa and recreational facilities, and sweeping ocean views that make every stay unforgettable. Just 10 minutes from the city centre, we are the perfect sanctuary for both the discerning business traveller and the leisure seeker. At Eko Hotels & Suites, luxury is not just a promise — it is the standard.",
+    "description": "access to spa facilities, a sauna, an outdoor swimming pool, and tennis courts, alongside a multi-cuisine restaurant serving African, Chinese, Mexican, Asian, and barbecue grill menus.",
+    "phone": 8092772700,
+    "email": "reservations@ekohotels.com",
+    "website": "https://www.ekohotels.com/",
+    "instagram": null,
+    "address": "1415 Adetokunbo Ademola Street, Victoria Island, Lagos 106104, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": "Garden Standard",
+    "numGuests": 4,
+    "numRooms": 5,
+    "ratePerNight": 275000,
+    "roomDescription": "The garden standard rooms occupy the Left wing of Kuramo Gardens, has spacious rooms with large windows, fully Air-Conditioned, phone, Cable TV, fridge and a view of the city of Lagos.",
+    "roomAmenities": [
+      "ac",
+      "minibar",
+      "coffee-maker"
+    ],
+    "checkIn": 12,
+    "checkOut": 12,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card",
+      "Transfer",
+      "Cash"
+    ]
+  },
+  {
+    "name": "Lagos Continental Hotel",
+    "rating": 5,
+    "highlight": "With 358 elegantly appointed rooms, sweeping panoramic views of both the Atlantic Ocean and the Lagos skyline, and an award-winning dining scene spanning Italian, African, Continental, and rooftop poolside cuisines, every moment here feels extraordinary. Whether you&#39;re here to close a deal, celebrate a milestone, or simply escape, our world-class facilities and warm hospitality ensure your stay is nothing short of unforgettable",
+    "description": "Lagos Continental Hotel is an award-winning five-star luxury hotel nestled in the heart of Victoria Island, Lagos. As West Africa&#39;s tallest hotel, it offers 358 elegant rooms, 37 suites, and a Presidential Suite, each thoughtfully designed for comfort, style, and breathtaking city or ocean views. Guests enjoy a rich dining experience across multiple restaurants and lounges, state-of-the-art meeting and event facilities, a fully equipped gym, and a vibrant rooftop pool. From intimate celebrations to large corporate gatherings, Lagos Continental delivers unrivalled hospitality at the highest international standards.",
+    "phone": "0201 330 5870",
+    "email": "info@thelagoscontinental.com",
+    "website": "https://www.thelagoscontinental.com/",
+    "instagram": null,
+    "address": "52a Kofo Abayomi St, Victoria Island, Lagos 101241, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [
+      "ac",
+      "minibar",
+      "coffee-maker"
+    ],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Cash",
+      "Transfer"
+    ]
+  },
+  {
+    "name": "Radisson Blu Anchorage Hotel",
+    "rating": 4,
+    "highlight": "Resting gracefully on the banks of Victoria Island with sweeping views of the Lagos Lagoon, the Radisson Blu Anchorage Hotel is where Scandinavian elegance meets the vibrant pulse of Africa. With its serene waterfront setting, award-winning dining, and an outdoor infinity pool that seems to merge with the lagoon itself, every glance outside your window is a postcard moment. This is Lagos luxury, beautifully anchored.",
+    "description": "The Radisson Blu Anchorage Hotel is an award-winning five-star property located along the prestigious Ozumba Mbadiwe Road on Victoria Island, Lagos. Featuring 170 stylishly designed rooms and suites by Swedish designer Christian Lundwall, the hotel blends contemporary Scandinavian aesthetics with premium comfort. Guests enjoy a rich dining experience across the Voyage Restaurant, Surface Bar & Grill, and The View poolside bar, alongside a fully equipped fitness centre, spa, and outdoor infinity pool. With six versatile event spaces and a prime location close to Lagos&#39; key business and leisure districts, the Radisson Blu Anchorage is the ideal retreat for both the corporate traveller and the discerning leisure guest.",
+    "phone": "0708 061 0000",
+    "email": "info.lagos@radissonblu.com",
+    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-blu-lagos-anchorage",
+    "instagram": null,
+    "address": "1a Ozumba Mbadiwe Ave, Victoria Island, Lagos 101241, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [
+      "ac",
+      "minibar",
+      "coffee-maker"
+    ],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant",
+      "Concierge"
+    ],
+    "paymentOptions": [
+      "Card",
+      "Transfer"
+    ]
+  },
+  {
+    "name": "The Wheatbaker",
+    "rating": 4,
+    "highlight": "Lagos&#39; most iconic boutique hotel where art meets hospitality, a decade-strong sanctuary of creativity, elegance, and warmth tucked in the heart of Ikoyi.",
+    "description": "The Wheatbaker is an award-winning luxury boutique hotel located in the serene neighbourhood of Ikoyi, Lagos. Celebrated for its unique fusion of contemporary art and world-class hospitality, the hotel offers thoughtfully designed rooms and suites, a signature GrillRoom restaurant, a renowned spa, swimming pool, gym, and Kófí coffee shop. Every corner of The Wheatbaker tells a story, from its curated art collections to its deeply personalised service, making it a haven for discerning travellers seeking comfort, culture, and quiet luxury.",
+    "phone": "0916 435 9466",
+    "email": "reservations@thewheatbakerlagos.com",
+    "website": "https://thewheatbakerlagos.com/",
+    "instagram": null,
+    "address": "4 Onitolo (Lawrence) Road, Ikoyi, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": "Luxury King",
+    "numGuests": 2,
+    "numRooms": "-",
+    "ratePerNight": "-",
+    "roomDescription": "A well-appointed king room with elegant décor, designed for comfort and relaxation",
+    "roomAmenities": [
+      "ac",
+      "minibar",
+      "coffee-maker"
+    ],
+    "checkIn": 15,
+    "checkOut": 12,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card",
+      "Transfer"
+    ]
+  },
+  {
+    "name": "Federal Palace Hotel & Casino",
+    "rating": 5,
+    "highlight": "Situated in the commercial hub of Lagos, The Federal Palace Hotel is tailored to international corporate standards, a historic landmark where Nigeria&#39;s Independence Declaration was signed, and a premier destination for travellers who value consistency in excellence",
+    "description": "The Federal Palace Hotel & Casino is a five-star property located within Victoria Island&#39;s commercial district, offering rooms, suites, and apartments alongside contemporary dining, a Pool Club, gym, and tennis courts. Guests enjoy a luxury escape complete with a casino, water park, free full breakfast, free WiFi, an outdoor pool with waterslide, 24-hour room service, and attentive staff praised for their professionalism. Built in 1960 and last renovated in 2008, the 14-storey hotel overlooks Lagos Harbour and is just 5 minutes from the business centre and 27km from Murtala Muhammed International Airport.",
+    "phone": "0706 497 4458",
+    "email": "reservations@suninternational.com",
+    "website": "https://www.federalpalace.com/",
+    "instagram": null,
+    "address": "6-8 Ahmadu Bello Wy, Victoria Island, Lagos 101241, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": "Standard / King Room",
+    "numGuests": 2,
+    "numRooms": 146,
+    "ratePerNight": 58500,
+    "roomDescription": "King bedded room, air-conditioned, with minibar, flat-screen satellite TV, tea & coffee facilities, and private bathroom with bath, shower and free toiletries",
+    "roomAmenities": [
+      "ac",
+      "minibar",
+      "coffee-maker"
+    ],
+    "checkIn": 14,
+    "checkOut": 12,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Four Points by Sheraton Lagos",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 448 9444",
+    "email": "info@fourpointslagos.com",
+    "website": null,
+    "instagram": null,
+    "address": "Plot 9/10 Block 2, Oniru Chieftaincy Estate, Victoria Island, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Lagos Oriental Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 280 6600\n",
+    "email": "reservations@lagosoriental.com",
+    "website": null,
+    "instagram": null,
+    "address": "3 Lekki-Epe Expressway, Victoria Island, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Golden Tulip Oniru Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 817 554 5555",
+    "email": "info@goldentuliponirusuites.com",
+    "website": null,
+    "instagram": null,
+    "address": "2b Elegba Festival Drive, Victoria Island, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Nordic Hotel Lagos",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 277 9000",
+    "email": "info@nordichotellagos.com",
+    "website": null,
+    "instagram": null,
+    "address": "258 Kofo Abayomi Street, Victoria Island, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The George Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 466 3666",
+    "email": "reservations@thegeorgelagos.com",
+    "website": null,
+    "instagram": null,
+    "address": "30 Lugard Avenue, Ikoyi, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Bogobiri House",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 461 3750",
+    "email": "info@bogobiri.com",
+    "website": null,
+    "instagram": null,
+    "address": "9 Maitama Sule Street, Ikoyi, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Avenue Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 277 0000",
+    "email": "reservations@theavenuesuites.com",
+    "website": null,
+    "instagram": null,
+    "address": "1390 Tiamiyu Savage Street, Victoria Island, Lagos",
+    "city": "Victoria Island",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Blowfish Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 277 7000",
+    "email": "info@theblowfishhotel.com",
+    "website": null,
+    "instagram": null,
+    "address": "17 Oju Olobun Street, Victoria Island, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Moorhouse Ikoyi Lagos",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 277 3000",
+    "email": "reservations@moorhouseikoyi.com",
+    "website": null,
+    "instagram": null,
+    "address": "1 Bankole Oki Street, Ikoyi, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Southern Sun Ikoyi",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 280 5200",
+    "email": "ssikoyi.reservations@tsogosun.com",
+    "website": null,
+    "instagram": null,
+    "address": "47 Alfred Rewane Road, Ikoyi, Lagos",
+    "city": "Ikoyi",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Lilygate Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 290 5460",
+    "email": "reservations@lilygatelagos.com",
+    "website": null,
+    "instagram": null,
+    "address": "2 Olubunmi Owa Street, Lekki Phase 1, Lagos",
+    "city": "Lekki Phase 1",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Sanzak Place",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5460",
+    "email": "info@thesanzakplace.com",
+    "website": null,
+    "instagram": null,
+    "address": "12B, Olubunmi Owa Street, Lekki Phase 1, Lagos",
+    "city": "Lekki Phase 2",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Woodmarble Hotels",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5461",
+    "email": "reservations@woodmarblehotels.com",
+    "website": null,
+    "instagram": null,
+    "address": "15B, Omorinre Johnson Street, Lekki Phase 1, Lagos",
+    "city": "Lekki Phase 3",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The W Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5462",
+    "email": "info@thewhotellagos.com",
+    "website": null,
+    "instagram": null,
+    "address": "20 Wole Olateju Crescent, Lekki Phase 1, Lagos",
+    "city": "Lekki Phase 4",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Sojourner by Genesis",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5463",
+    "email": "reservations@sojournerhotels.com",
+    "website": null,
+    "instagram": null,
+    "address": "16 Oba Akinjobi Street, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Regent Luxury Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5464",
+    "email": "info@theregentsuites.com",
+    "website": null,
+    "instagram": null,
+    "address": "25 Joel Ogunnaike Street, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Palmview Manor Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5465",
+    "email": "reservations@palmviewmanor.com",
+    "website": null,
+    "instagram": null,
+    "address": "1A, Adekunle Fajuyi Way, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Montrose Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5466",
+    "email": "info@montrosehotel.com",
+    "website": null,
+    "instagram": null,
+    "address": "3A, Allen Avenue, Ikeja, Lagos",
+    "city": "Ikeja",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Ivory Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5467",
+    "email": "reservations@ivoryhotels.com",
+    "website": null,
+    "instagram": null,
+    "address": "2, Toyin Street, Ikeja, Lagos",
+    "city": "Ikeja",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Habitat Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5468",
+    "email": "info@habitatsuites.com",
+    "website": null,
+    "instagram": null,
+    "address": "4, Asa Afariogun Street, Ajao Estate, Lagos",
+    "city": "Ajao Estate",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Ambassadors Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5469",
+    "email": "reservations@ambassadorshotel.com",
+    "website": null,
+    "instagram": null,
+    "address": "1, Osolo Way, Ajao Estate, Lagos",
+    "city": "Ajao Estate",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Belaggio Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5470",
+    "email": "info@belaggiosuites.com(here is where I am)",
+    "website": null,
+    "instagram": null,
+    "address": "7, Obokun Close, Off Allen Avenue, Ikeja, Lagos",
+    "city": "Ikeja",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Camelot Rest House",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5471",
+    "email": "reservations@camelotresthouse.com",
+    "website": null,
+    "instagram": null,
+    "address": "10, Oba Akinjobi Street, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Cheery Manor",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5472",
+    "email": "info@cheerymanor.com",
+    "website": null,
+    "instagram": null,
+    "address": "12, Joel Ogunnaike Street, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Emperors Place",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": "+234 1 291 5473",
+    "email": "reservations@emperorsplace.com (email not working)",
+    "website": null,
+    "instagram": null,
+    "address": "15, Joel Ogunnaike Street, Ikeja GRA, Lagos",
+    "city": "Ikeja GRA",
+    "state": "Lagos",
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Cheery Manor",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "FQCH+F7Q After Greensprings School, Oba Tajudeen Elemoro Street, behind Elemoro Police Station, Oke-Odo, Lekki 105101, Lagos",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Camelot Rest House",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "Plot 1425B Amodu Tijani Cl, Victoria Island, Lagos 106104, Lagos",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Belaggio Suites",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "1686A, Oladele Olashore Street, Off Sanusi Fafunwa Street, Lagos, Ng, Lagos, Nigeria",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The Ambassadors Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "16/24 Okotie Eboh Cl, Ikoyi, Lagos 106104, Lagos",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [
+      "airport-shuttle",
+      "public-transport"
+    ],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "Swiss international the vistana",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "Plot 4 and 5 Road 8D, Victoria Garden, Lekki, Lagos, 105102",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "the ivory tower",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "226A, Muri Okunola, Victoria Island, Victoria Island, Ng, Lagos, Nigeria",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "the montrose",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "Plot 5, Aliu Animashaun Street, Off Providence Road, Off Admiralty Way, Lekki Phase 1, Lagos.",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "the palmview manor",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": "2 Tony Anegbode St, Victoria Island, Lagos 100001, Lagos",
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "The W Hotel",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": null,
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "name": "southern sun hotel/ moven pick",
+    "rating": 3,
+    "highlight": null,
+    "description": null,
+    "phone": null,
+    "email": null,
+    "website": null,
+    "instagram": null,
+    "address": null,
+    "city": null,
+    "state": null,
+    "landmarks": null,
+    "transportation": [],
+    "roomName": null,
+    "numGuests": null,
+    "numRooms": null,
+    "ratePerNight": null,
+    "roomDescription": null,
+    "roomAmenities": [],
+    "checkIn": null,
+    "checkOut": null,
+    "cancellationHighlight": null,
+    "cancellationPolicy": null,
+    "amenities": [
+      "Free Wifi",
+      "Restaurant"
+    ],
+    "paymentOptions": [
+      "Card"
+    ]
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  },
+  {
+    "transportation": [],
+    "roomAmenities": [],
+    "amenities": [],
+    "paymentOptions": []
+  }
+]
