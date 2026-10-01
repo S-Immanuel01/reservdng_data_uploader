@@ -44,7 +44,8 @@ describe('RESERVDNG STAYS UPLOAD', () => {
         maxStay: row[30],
         advancedBooking: row[31],
         cancellationHighlights: row[32],
-        cancellationPolicy: row[33]
+        cancellationPolicy: row[33],
+        cautionFee: row[34]
       }))
     })
 
@@ -144,7 +145,7 @@ describe('RESERVDNG STAYS UPLOAD', () => {
               ],
               "house_rules": _stay.houseRules ??  "agehfngjergh",
               "daily_rate": _stay.dailyRate ??  239999,
-              "caution_fee":   20000,
+              "caution_fee": _stay.cautionFee ??  20000,
               "weekly_rate":  null,
               "monthly_rate": null,
               "min_stay": _stay.minimumStay ??  1,
