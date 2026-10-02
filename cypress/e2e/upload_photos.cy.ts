@@ -39,12 +39,12 @@ describe('RESERVDNG PHOTOS UPLOAD', () => {
 
     cy.get('.space-y-6 > a').then(($cards) => {
       const cards = [...$cards].map((card) => ({
-        name: card.querySelector('h3')?.textContent?.trim(),
-        href: card.getAttribute('href')
+        name: card.querySelector('h3')?.textContent?.trim() ?? '',
+        href: card.getAttribute('href') ?? ''
       }))
 
-      cy.wrap(cards).each((card) => {
-        cy.task('findFixtureImages', {
+      cy.wrap(cards).each((card: { name: string; href: string }) => {
+        cy.task<string[]>('findFixtureImages', {
           searchString: card.name,
           subfolder: filepath
         }).then(($imagesPath) => {

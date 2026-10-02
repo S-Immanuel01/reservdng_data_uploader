@@ -1,6 +1,8 @@
 {
   "devDependencies": {
+    "@types/node": "^26.6.4",
     "cypress": "^15.16.0",
+    "dotenv": "^18.0.5",
     "node-xlsx": "^0.24.0",
     "typescript": "^6.0.3",
     "xlsx": "^0.18.5"
@@ -11,8 +13,5 @@
   "scripts": {
     "start": "npx cypress open --e2e",
     "create_dir": "node scripts/create_files.js"
-  },
-  "dependencies": {
-    "dotenv": "^18.0.4"
   }
 }

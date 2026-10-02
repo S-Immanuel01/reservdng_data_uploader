@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("parseXlsx", (inputFile) => {
-    return cy.task('parseXlsx', { filePath: inputFile })
+    return cy.task<unknown>('parseXlsx', { filePath: inputFile })
 });
 
 Cypress.Commands.add("login", (email) => {
@@ -40,6 +40,10 @@ Cypress.Commands.add("login", (email) => {
         cy.get('#verify-btn', { timeout: 180000 })
             .should('be.enabled')
             .click()
+    }, {
+        validate() {
+            cy.contains('button','Sign In', {matchCase: false}).should('not.exist')
+        }
     })
 })
 
@@ -55,5 +59,9 @@ Cypress.Commands.add("loginWithEmailAndPassword", (email, password) => {
         cy.get('#request-otp-btn', { timeout: 180000 })
             .should('be.enabled')
             .click()
+    }, {
+        validate() {
+             cy.contains('button','Sign In', {matchCase: false}).should('not.exist')
+        }
     })
 })

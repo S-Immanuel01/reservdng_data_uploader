@@ -6,11 +6,11 @@ describe('RESERVDNG HOTEL UPLOAD', () => {
     'end': 10
   }
 
-  let hotels = []
+  let hotels: Array<Record<string, any>> = []
 
   before(() => {
-    cy.task('readRemoteExcel', url).then((sheets) => {
-      const sheet4 = sheets[0].data
+    cy.task<Array<{ name: string; data: any[][] }>>('readRemoteExcel', url).then((sheets) => {
+      const sheet4 = sheets[0]?.data ?? []
 
       hotels = sheet4.slice(range.start + 1, range.end + 2).map((row) => ({
         name: row[2],
@@ -25,28 +25,28 @@ describe('RESERVDNG HOTEL UPLOAD', () => {
         city: row[11],
         state: row[12],
         landmarks: row[13],
-        transportation: row[14] ? row[14].split(',').map(t => t.trim()) : [],
+        transportation: row[14] ? String(row[14]).split(',').map((t: string) => t.trim()) : [],
         roomName: row[15],
         numGuests: row[16],
         numRooms: row[17],
         ratePerNight: row[18],
         roomDescription: row[19],
-        roomAmenities: row[20] ? row[20].split(',').map(a => a.trim()) : [],
+        roomAmenities: row[20] ? String(row[20]).split(',').map((a: string) => a.trim()) : [],
         checkIn: row[21],
         checkOut: row[22],
         cancellationHighlight: row[23],
         cancellationPolicy: row[24],
-        amenities: row[25] ? row[25].split(',').map(a => a.trim()) : [],
-        paymentOptions: row[26] ? row[26].split(',').map(p => p.trim()) : [],
+        amenities: row[25] ? String(row[25]).split(',').map((a: string) => a.trim()) : [],
+        paymentOptions: row[26] ? String(row[26]).split(',').map((p: string) => p.trim()) : [],
         specialFeatures: row[27]
       }))
     })
 
-    y.loginWithEmailAndPassword(Cypress.env('email'), Cypress.env('password'))
+    cy.loginWithEmailAndPassword(Cypress.env('email'), Cypress.env('password'))
   })
 
   it('UPLOADS ALL HOTELS', () => {
-    cy.wrap(hotels).each((_hotel) => {
+    cy.wrap(hotels).each((_hotel: any) => {
       cy.visit('/')
       cy.get('span.rounded-full')
         .first()
