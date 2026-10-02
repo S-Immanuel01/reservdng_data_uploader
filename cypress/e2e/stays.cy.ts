@@ -166,6 +166,7 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
       cy.contains('label', 'Host Name', { matchCase: false })
         .siblings('div')
         .find('input')
+        .clear()
         .type(_stay.hostName)
       // HOST EMAIL
       cy.contains('label', 'Email Address', { matchCase: false })
@@ -332,6 +333,7 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
 
       // STEP 6 - REVIEW AND PUBLISH
       // CLICK THE PUBLISH BUTTON
+      cy.contains('button', 'Create Stay', { matchCase: false }).click({ force: true })
 
       cy.wait(10000)
     })
