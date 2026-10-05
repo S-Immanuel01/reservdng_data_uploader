@@ -24,9 +24,10 @@ interface SaveFixtureArgs {
 }
 
 export default defineConfig({
-  allowCypressEnv: true,
   pageLoadTimeout: 90000,
   e2e: {
+    keystrokeDelay: 0,
+    defaultCommandTimeout: 60000,
     baseUrl: "https://reservdng.com",
     env: {
       EMAIL: process.env.EMAIL,

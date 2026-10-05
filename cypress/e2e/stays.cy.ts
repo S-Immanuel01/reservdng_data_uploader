@@ -32,7 +32,7 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
         state: row[16],
         landmarks: row[17],
         transportation: row[18] ? String(row[18]).split(',').map((a: string) => a.trim()) : [],
-        checkInInstruction: row[19] ?? ' ',
+        checkInInstruction: row[19] ?? 'Some default instruction',
         checkInTime: row[20],
         checkOutTime: row[21],
         kitchenAmenities: row[22] ? String(row[22]).split(',').map((a: string) => a.trim()) : [],
@@ -63,15 +63,7 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
 
   it('UPLOADS ALL STAYS', () => {
     cy.wrap(stays).each((_stay: any) => {
-      cy.visit('/')
-      cy.get('span.rounded-full')
-        .first()
-        .click({ force: true })
-      cy.contains('New Location')
-        .click()
-      cy.get('.grid.gap-8 .p-6')
-        .eq(2)
-        .click()
+      cy.visit('/stays/create')
       cy.get('[type="file"]')
         .each(($input) => cy.wrap($input).selectFile('cypress/fixtures/hotel.jpg', { force: true }))
 
@@ -200,8 +192,6 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
               .click()
           })
         })
-
-
 
       cy.contains('h3', 'Living Area', { matchCase: false })
         .parent()
