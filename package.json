@@ -7,9 +7,9 @@
     "typescript": "^6.0.3",
     "xlsx": "^0.18.5"
   },
-  "allowScripts": [
-    "cypress"
-  ],
+  "allowScripts": {
+    "cypress": true
+  },
   "scripts": {
     "start": "npx cypress open --e2e",
     "create_dir": "node scripts/create_files.js"
