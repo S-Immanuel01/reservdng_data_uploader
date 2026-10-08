@@ -5,6 +5,8 @@ import https from 'https';
 import http from 'http';
 import * as XLSX from 'xlsx';
 import dotenv from 'dotenv';
+import FormData from 'form-data'
+import axios from 'axios'
 
 dotenv.config({ path: path.join(__dirname, '.env') });
 
@@ -34,6 +36,55 @@ export default defineConfig({
       PASSWORD: process.env.PASSWORD
     },
     setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) {
+      on('task', {
+        async multipartRequest({ url, fields, files, headers = {}, cookies = {} }) {
+          const form = new FormData()
+
+          // regular text fields (including array fields like features[])
+          Object.entries(fields).forEach(([key, value]) => {
+            if (Array.isArray(value)) {
+              value.forEach((v) => form.append(`${key}[]`, v))
+            } else {
+              form.append(key, value as string)
+            }
+          })
+
+          // file fields: { fieldName: filePath } or { fieldName: [filePath, ...] }
+          Object.entries(files).forEach(([key, value]) => {
+            if (Array.isArray(value)) {
+              if (value.length === 0) {
+                // nothing to attach; omit entirely unless backend requires the key present
+              } else {
+                value.forEach((p) => {
+                  if (!fs.existsSync(p as string)) throw new Error(`File not found: ${p}`)
+                  form.append(`${key}[]`, fs.createReadStream(p as string))
+                })
+              }
+            } else {
+              if (!fs.existsSync(value as string)) throw new Error(`File not found: ${value}`)
+              form.append(key, fs.createReadStream(value as string))
+            }
+          })
+
+          const cookieHeader = Object.entries(cookies)
+            .map(([k, v]) => `${k}=${v}`)
+            .join('; ')
+
+          try {
+            const response = await axios.post(url, form, {
+              headers: {
+                ...form.getHeaders(),
+                ...headers,
+                ...(cookieHeader ? { Cookie: cookieHeader } : {}),
+              },
+              validateStatus: () => true, // let Cypress assert on status itself
+            })
+            return { status: response.status, body: response.data }
+          } catch (err: any) {
+            return { status: err.response?.status ?? 500, body: err.response?.data ?? err.message }
+          }
+        },
+      })
       on('task', {
         async readRemoteExcel(url: string) {
           const buffer = await new Promise<Buffer>((resolve, reject) => {

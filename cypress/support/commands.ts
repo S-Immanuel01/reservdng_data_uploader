@@ -30,9 +30,7 @@ Cypress.Commands.add("parseXlsx", (inputFile) => {
 
 Cypress.Commands.add("login", (email) => {
     cy.session('login', () => {
-        cy.visit('/')
-        cy.contains('Sign In')
-            .click()
+        cy.visit('/signin')
         cy.get('#email-input')
             .type(email)
         cy.get('#request-otp-btn')
@@ -42,16 +40,14 @@ Cypress.Commands.add("login", (email) => {
             .click()
     }, {
         validate() {
-            cy.contains('button','Sign In', {matchCase: false}).should('not.exist')
+            cy.contains('button', 'Sign In', { matchCase: false }).should('not.exist')
         }
     })
 })
 
 Cypress.Commands.add("loginWithEmailAndPassword", (email, password) => {
     cy.session('login', () => {
-        cy.visit('/')
-        cy.contains('Sign In')
-            .click()
+        cy.visit('/signin')
         cy.get('#email-input')
             .type(email)
         cy.get('#password-input')
@@ -61,7 +57,7 @@ Cypress.Commands.add("loginWithEmailAndPassword", (email, password) => {
             .click()
     }, {
         validate() {
-             cy.contains('button','Sign In', {matchCase: false}).should('not.exist')
+            cy.contains('button', 'Sign In', { matchCase: false }).should('not.exist')
         }
     })
 })
