@@ -69,13 +69,6 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
         token = value?.toString() ?? ''
       })
 
-      cy.log(JSON.stringify({
-        kitchen: _stay.kitchenAmenities,
-        living: _stay.livingAmenities,
-        bedroom: _stay.bedroomAmenities,
-        general: _stay.generalAmenities,
-      }))
-
       cy.getCookie('XSRF-TOKEN').then((xsrfCookie) => {
         cy.getCookie('reservdng_session').then((sessionCookie) => {
           const decodedToken = decodeURIComponent(xsrfCookie!.value)
@@ -100,13 +93,13 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
               host_name: _stay.hostName,
               host_phone: _stay.hostPhone,
               host_email: _stay.hostEmail,
-              // host_whatsapp: _stay.hostWhatsappNumber,
+              host_whatsapp: _stay.hostWhatsappNumber,
               address: _stay.address,
               city: _stay.city,
               state: _stay.state,
               landmarks: _stay.landmarks,
               checkin_instructions: _stay.checkInInstruction,
-              // house_rules: _stay.houseRules,
+              house_rules: _stay.houseRules,
               checkin_time: _stay.checkInTime,
               checkout_time: _stay.checkOutTime,
               kitchen_amenities: _stay.kitchenAmenities,
@@ -129,7 +122,7 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
           }).then((result: any) => {
             cy.log(JSON.stringify(result.body, null, 2))
             console.log(result.body)
-            // expect(result.status).to.eq(200) // or whatever success status the API returns
+            expect(result.status).to.eq(200)
 
           })
 
