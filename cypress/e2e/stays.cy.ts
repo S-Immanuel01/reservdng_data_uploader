@@ -7,10 +7,11 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
   }
 
   let stays: Array<Record<string, any>> = []
+  let token: string
 
   before(() => {
-    cy.clearAllSessionStorage()
-    cy.clearAllLocalStorage()
+    // cy.clearAllSessionStorage()
+    // cy.clearAllLocalStorage()
     cy.task<Array<{ name: string; data: any[][] }>>('readRemoteExcel', url).then((sheets) => {
       const stays_sheet = sheets[0]?.data ?? []
 
@@ -64,266 +65,71 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
   it('UPLOADS ALL STAYS', () => {
     cy.wrap(stays).each((_stay: any) => {
       cy.visit('/stays/create')
-      cy.get('[type="file"]')
-        .each(($input) => cy.wrap($input).selectFile('cypress/fixtures/hotel.jpg', { force: true }))
+      cy.get('input[name="_token"]').invoke('val').then((value) => {
+        token = value?.toString() ?? ''
+      })
 
-      // step 1 property
-      cy.contains('label', 'Property Name', { matchCase: false })
-        .siblings('input')
-        .type(_stay.name)
-      // enter property type
-      cy.contains('.amenity-chip', _stay.type, { matchCase: false }).click()
-      // enter property capacity
-      cy.contains('h3', 'Property Capacity', { matchCase: false })
-        .siblings('div').then(($div) => {
-          // enter number of bedrooms
-          cy.wrap($div).contains('label', 'bedrooms', { matchCase: false })
-            .parent()
-            .find('input')
-            .clear()
-            .type(_stay.bedrooms)
-          // enter number of bathrooms
-          cy.wrap($div).contains('label', 'Bathrooms', { matchCase: false })
-            .parent()
-            .find('input')
-            .clear()
-            .type(_stay.bathrooms)
-          // enter total number of guests
-          cy.wrap($div).contains('label', 'Max Guests', { matchCase: false })
-            .parent()
-            .find('input')
-            .clear()
-            .type(_stay.guests)
-        })
-      // entr property highlight
-      cy.contains('label', 'Property Highlight', { matchCase: false })
-        .siblings('textarea')
-        .type(_stay.highlight)
-      // Enter property description
-      cy.contains('label', 'Description', { matchCase: false })
-        .siblings('textarea')
-        .type(_stay.description)
-      // Enter property features
-      cy.contains('h3', 'Property Features', { matchCase: false })
-        .siblings('div').then(($div) => {
-          cy.log(`stays features: ${_stay.features}`)
-          // Click each features
-          _stay.features.forEach((amenity: string) => {
-            cy.wrap($div).find('.amenity-chip')
-              .contains(amenity, { matchCase: false })
-              .click()
+      cy.getCookie('XSRF-TOKEN').then((xsrfCookie) => {
+        cy.getCookie('reservdng_session').then((sessionCookie) => {
+          const decodedToken = decodeURIComponent(xsrfCookie!.value)
+
+          cy.task('multipartRequest', {
+            url: 'https://reservdng.com/stays',
+            headers: {
+              'X-XSRF-TOKEN': decodeURIComponent(xsrfCookie!.value),
+              'X-CSRF-TOKEN': token,
+              'x-csrf-token': token,
+              'Cookie': `XSRF-TOKEN=${xsrfCookie!.value}; reservdng_session=${sessionCookie!.value}`,
+            },
+            fields: {
+              name: _stay.name,
+              type: _stay.type,
+              bedrooms: _stay.bedrooms,
+              bathrooms: _stay.bathrooms,
+              guests: _stay.guests,
+              highlight: _stay.highlight,
+              description: _stay.description,
+              features: _stay.features,
+              host_name: _stay.hostName,
+              host_phone: _stay.hostPhone,
+              host_email: _stay.hostEmail,
+              host_whatsapp: _stay.hostWhatsappNumber,
+              address: _stay.address,
+              city: _stay.city,
+              state: _stay.state,
+              landmarks: _stay.landmarks,
+              checkin_instructions: _stay.checkInInstruction,
+              house_rules: _stay.houseRules,
+              checkin_time: _stay.checkInTime,
+              checkout_time: _stay.checkOutTime,
+              kitchen_amenities: _stay.kitchenAmenities,
+              living_amenities: _stay.livingAmenities,
+              bedroom_amenities: _stay.bedroomAmenities,
+              general_amenities: _stay.generalAmenities,
+              cancellation_highlight: _stay.cancellationHighlights,
+              cancellation_policy: _stay.cancellationPolicy,
+              daily_rate: _stay.dailyRate,
+              caution_fee: _stay.cautionFee,
+              min_stay: _stay.minimumStay,
+              min_advance_booking: _stay.advancedBooking,
+              transportation: _stay.transportation,
+              _token: token
+            },
+            files: {
+              "host_photo": 'cypress/fixtures/host/hotel.jpg',
+              'photos': ['cypress/fixtures/hotel.jpg'],
+            },
+          }).then((result: any) => {
+            cy.log(JSON.stringify(result.body, null, 2))
+            console.log(result.body)
+            expect(result.status).to.eq(200)
+
           })
+
         })
-      // Go to page 2
-      cy.contains('button>div', '2').click()
+      })
 
-      // STEP 2 PROPERTY LOCATION
-      // STREET ADDRESS
-      cy.contains('label', 'Street Address', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.address)
-      // ENTER CITY
-      cy.contains('label', 'City', { matchCase: false })
-        .siblings('input')
-        .type(_stay.city)
-      // SELECT STATE
-      cy.contains('label', 'State', { matchCase: false })
-        .siblings('select')
-        .select(_stay.state)
-      // ENTER LANDMARKS
-      cy.contains('label', 'Nearby Landmarks', { matchCase: false })
-        .siblings('input')
-        .type(_stay.landmarks)
-
-      // GETTING AROUND
-      cy.contains('h3', 'Getting Around ', { matchCase: false })
-        .siblings('div').then(($div) => {
-          // Click each transport
-          _stay.transportation.forEach((amenity: string) => {
-            const _amenity = amenity.split('-').join(' ')
-            cy.wrap($div).find('.amenity-chip')
-              .contains(_amenity, { matchCase: false })
-              .click()
-          })
-        })
-
-      // HOST/CONTACT PERSON
-
-      // SELECT HOST PHOTO
-      cy.contains('p', 'Profile Photo', { matchCase: false }).siblings('label')
-        .find('input[type="file"]')
-        .selectFile('cypress/fixtures/host/hotel.jpg', { force: true })
-      // HOST NAME
-      cy.contains('label', 'Host Name', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .clear()
-        .type(_stay.hostName)
-      // HOST EMAIL
-      cy.contains('label', 'Email Address', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.hostEmail)
-      // PHONE NUMBER
-      cy.contains('label', 'Phone Number', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.hostPhone)
-      // HOST WA NUMBER
-      cy.contains('label', 'WhatsApp Number', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.hostWhatsappNumber)
-      // CLICK ON THE 3RD PAGE
-      cy.contains('button>div', '3').click()
-
-      // STEP 3 - AMENITIES
-      // KITCHEN AMENITIES
-      cy.contains('h3', 'Kitchen', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // Click each transport
-          _stay.kitchenAmenities.forEach((amenity: string) => {
-            const _amenity = amenity.split('-').join(' ')
-            cy.wrap($div).find('.amenity-chip')
-              .contains(_amenity, { matchCase: false })
-              .click()
-          })
-        })
-
-      cy.contains('h3', 'Living Area', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // Click each transport
-          _stay.livingAmenities.forEach((amenity: string) => {
-            const _amenity = amenity.split('-').join(' ')
-            cy.wrap($div).find('.amenity-chip')
-              .contains(_amenity, { matchCase: false })
-              .click()
-          })
-        })
-
-      cy.contains('h3', 'Bedroom & Bathroom', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // Click each transport
-          _stay.bedroomAmenities.forEach((amenity: string) => {
-            const _amenity = amenity.split('-').join(' ')
-            cy.wrap($div).find('.amenity-chip')
-              .contains(_amenity, { matchCase: false })
-              .click()
-          })
-        })
-
-      cy.contains('h3', 'General', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // Click each transport
-          _stay.generalAmenities.forEach((amenity: string) => {
-            const _amenity = amenity.split('-').join(' ')
-            cy.wrap($div).find('.amenity-chip')
-              .contains(_amenity, { matchCase: false })
-              .click()
-          })
-        })
-
-      // ARRIVAL
-      // CHECK IN TIME
-      cy.contains('label', 'Check-in Time', { matchCase: false })
-        .siblings('input')
-        .type(_stay.checkInTime)
-      // CHECK OUT TIME
-      cy.contains('label', 'Check-out Time', { matchCase: false })
-        .siblings('input')
-        .type(_stay.checkOutTime)
-      // CHECK IN INSTRUCTION
-      cy.contains('label', 'Check-in Instructions', { matchCase: false })
-        .parent()
-        .find('textarea')
-        .type(_stay.checkInInstruction)
-      // HOUSE RULES
-      cy.contains('h3', 'House Rules', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('textarea')
-        .type(_stay.checkInInstruction)
-      // CLICK STEP 4
-      cy.contains('button>div', '4').click()
-
-      // STEP 4 - PHOTOS AND PRICING
-      // ADD PROPERTY PHOTOS
-      cy.contains('label', 'Add Photos', { matchCase: false })
-        .find('input[type="file"]')
-        .selectFile('cypress/fixtures/hotel.jpg', { force: true })
-      // PRICING - DAILY RATE
-      cy.contains('label', 'Daily Rate', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.dailyRate)
-      // PRICING - CAUTION FEE
-      cy.contains('label', 'Caution Fee', { matchCase: false })
-        .siblings('div')
-        .find('input')
-        .type(_stay.cautionFee)
-      // NAVIGATE TO STEP 5
-      cy.contains('button>div', '5').click()
-
-      // STEP 5 - BOOKING
-      // STAYS DURATION
-      cy.contains('h3', 'Stay Duration', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // enter number of MINIMUM STAY
-          cy.wrap($div).contains('label', 'Minimum Stay', { matchCase: false })
-            .parent()
-            .find('input')
-            .clear()
-            .type(_stay.minimumStay)
-          // enter number of Maximum Stay
-          cy.wrap($div).contains('label', 'Maximum Stay', { matchCase: false })
-            .parent()
-            .find('input')
-          // .type(_stay.bathrooms)
-          // enter total number of guests
-        })
-      // ADVANCED BOOKING
-      cy.contains('h3', 'Advance Booking', { matchCase: false })
-        .parent()
-        .parent()
-        .siblings('div').then(($div) => {
-          // enter number of MINIMUM Advance
-          cy.wrap($div).contains('label', 'Minimum Advance', { matchCase: false })
-            .parent()
-            .find('input')
-            .clear()
-            .type(_stay.advancedBooking)
-          // enter number of Maximum Advance
-          cy.wrap($div).contains('label', 'Maximum Advance', { matchCase: false })
-            .parent()
-            .find('input')
-          // .type(_stay.bathrooms)
-          // enter total number of guests
-        })
-      // CANCELLATION HIGHTLIGHTS
-      cy.contains('label', 'Policy Highlight', { matchCase: false })
-        .siblings('input')
-        .type(_stay.cancellationHighlights)
-      // CANCELLATION POLICY
-      cy.contains('label', 'Detailed Policy', { matchCase: false })
-        .siblings('textarea')
-        .type(_stay.cancellationPolicy)
-      // NAVIGATE TO STEP 6
-      cy.contains('button>div', '6').click()
-
-      // STEP 6 - REVIEW AND PUBLISH
-      // CLICK THE PUBLISH BUTTON
-      cy.contains('button', 'Create Stay', { matchCase: false }).click({ force: true })
+      cy.visit(`/stays/${_stay.name}`)
 
       cy.wait(10000)
     })
