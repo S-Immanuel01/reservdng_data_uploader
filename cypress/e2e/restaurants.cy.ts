@@ -127,7 +127,7 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
         })
       })
 
-      cy.visit(`/restaurants/${_restaurant.name}`)
+      cy.visit(`/restaurants/${_restaurant.name.toLowerCase().trim().replace(/\s+/g, '-')}`);
 
       cy.wait(10000)
     })
