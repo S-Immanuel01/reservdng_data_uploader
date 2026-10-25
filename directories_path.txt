@@ -1,1 +1,1 @@
-hotels/some_amazing_hotel/
+hotels/some amazing hotel/
