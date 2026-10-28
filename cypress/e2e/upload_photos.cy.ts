@@ -5,37 +5,34 @@ describe('RESERVDNG PHOTOS UPLOAD', () => {
     clubs_url: 'https://docs.google.com/spreadsheets/d/1FmQj0-Mj8lXgoQlFfsX2aQG9rkn5Pk6EkB3HAUYj4hM/edit?gid=1538813178#gid=1538813178',
     restaurant_url: 'https://docs.google.com/spreadsheets/d/1FmQj0-Mj8lXgoQlFfsX2aQG9rkn5Pk6EkB3HAUYj4hM/edit?gid=1538813178#gid=1538813178'
   }
+  /// Entry to the code use this to select whether hotel, stay or restaurant
+  const sheet_url = url.shortlets_url
 
-  const sheet_url = url.hotel_url
-
+  // Range of photo on the list
   const range = {
     'start': 10, // from 1 up
     'end': 10
   }
 
-  let hotels = []
-
   const filepath = sheet_url == url.hotel_url ? 'hotels'
     : sheet_url == url.restaurant_url ? 'restaurants'
-      : sheet_url === url.shortlets_url ? 'shortlets'
+      : sheet_url === url.shortlets_url ? 'stays'
         : sheet_url === url.clubs_url ? 'clubs'
           : 'hotels'
 
   before(() => {
-    // cy.task('readRemoteExcel', sheet_url).then((sheets) => {
-    //   const sheet4 = sheets[0].data
+    cy.env<{ EMAIL?: string; PASSWORD?: string }>(['EMAIL', 'PASSWORD']).then(({ EMAIL, PASSWORD }) => {
+      if (!EMAIL || !PASSWORD) {
+        throw new Error('Missing EMAIL or PASSWORD in Cypress environment. Check the project .env file.');
+      }
 
-    //   hotels = sheet4.slice(range.start + 1, range.end + 2).map((row) => ({
-    //     name: row[2],
-    //   }))
-    // })
-
-    cy.login('reservation@reservdng.com')
+      return cy.loginWithEmailAndPassword(EMAIL, PASSWORD);
+    });
   })
 
 
   it('UPLOADS ALL PHOTOS', () => {
-    cy.visit(`/hotels?sort_type=created_at~asc&page=${Math.floor(Math.abs(range.start - 1) / 10) + 1}`)
+    cy.visit(`/${filepath}?sort_type=created_at~asc&page=${Math.floor(Math.abs(range.start - 1) / 10) + 1}`)
 
     cy.get('.space-y-6 > a').then(($cards) => {
       const cards = [...$cards].map((card) => ({
@@ -53,7 +50,7 @@ describe('RESERVDNG PHOTOS UPLOAD', () => {
             return  // skip this card
           }
 
-          cy.visit(card.href + "/gallery/photos")
+          cy.visit(card.href + "/gallery")
 
           // Upload all images
           cy.wrap($imagesPath).each((image) => {
@@ -79,6 +76,6 @@ describe('RESERVDNG PHOTOS UPLOAD', () => {
 
     cy.wait(10000)
 
-    cy.visit(`/hotels?sort_type=created_at~asc&page=${Math.floor(Math.abs(range.start - 1) / 10) + 1}`)
+    cy.visit(`/${filepath}?sort_type=created_at~asc&page=${Math.floor(Math.abs(range.start - 1) / 10) + 1}`)
   })
 })

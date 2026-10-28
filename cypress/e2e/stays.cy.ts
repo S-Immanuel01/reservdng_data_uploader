@@ -122,14 +122,12 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
           }).then((result: any) => {
             cy.log(JSON.stringify(result.body, null, 2))
             console.log(result.body)
-
+            // expect(result.status).to.eq(200)
           })
-
         })
       })
 
       cy.visit(`/stays/${_stay.name.toLowerCase().trim().replace(/\s+/g, '-')}`);
-
 
       cy.wait(10000)
     })
