@@ -122,7 +122,6 @@ describe('RESERVDNG STAYS UPLOAD', { testIsolation: false }, () => {
           }).then((result: any) => {
             cy.log(JSON.stringify(result.body, null, 2))
             console.log(result.body)
-            // expect(result.status).to.eq(200)
           })
         })
       })

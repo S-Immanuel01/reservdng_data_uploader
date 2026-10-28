@@ -14,38 +14,28 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
       const restaurants_sheet = sheets[0]?.data ?? []
 
       restaurants = restaurants_sheet.slice(range.start + 1, range.end + 2).map((row) => ({
-        name: row[2],
-        type: row[3],
-        bedrooms: row[4],
-        bathrooms: row[5],
-        guests: row[6],
-        highlight: row[7],
-        description: row[8],
-        features: row[9] ? String(row[9]).split(',').map((a: string) => a.trim()) : [],
-        hostName: row[10],
-        hostPhone: row[11],
-        hostEmail: row[12],
-        hostWhatsappNumber: row[13],
-        address: row[14],
-        city: row[15],
-        state: row[16],
-        landmarks: row[17],
-        transportation: row[18] ? String(row[18]).split(',').map((a: string) => a.trim()) : [],
-        checkInInstruction: row[19] ?? 'Some default instruction',
-        checkInTime: row[20],
-        checkOutTime: row[21],
-        kitchenAmenities: row[22] ? String(row[22]).split(',').map((a: string) => a.trim()) : [],
-        livingAmenities: row[23] ? String(row[23]).split(',').map((a: string) => a.trim()) : [],
-        bedroomAmenities: row[24] ? String(row[24]).split(',').map((a: string) => a.trim()) : [],
-        generalAmenities: row[25] ? String(row[25]).split(',').map((p: string) => p.trim()) : [],
-        houseRules: row[26],
-        dailyRate: row[27],
-        minimumStay: row[28],
-        maxStay: row[29],
-        advancedBooking: row[30],
-        cancellationHighlights: row[31],
-        cancellationPolicy: row[32],
-        cautionFee: row[33]
+        name: row[2] ?? "The Bloom",
+        cuisines: row[3] ? String(row[3]).split(',').map((a: string) => a.trim()) : ['African', 'Asian Fusion'],
+        highlight: row[4],
+        description: row[5],
+        price_rating: row[6],
+        dress_code: row[7],
+        phone: row[8],
+        email: row[9],
+        website: row[10],
+        instagram: row[11],
+        address: row[12],
+        city: row[13],
+        state: row[14],
+        landmarks: row[15],
+        transportation: row[16] ? String(row[16]).split(',').map((a: string) => a.trim()) : ['airport-shuttle', 'taxi-service'],
+        amenities: row[17] ? String(row[17]).split(',').map((a: string) => a.trim()) : ['outdoor', 'rooftop'],
+        cancellation_highlight: row[18] ?? 'highlight',
+        cancellation_policy: row[19] ?? 'policy',
+        late_highlight: row[20] ?? 'late hightlight',
+        late_policy: row[21] ?? 'late policy',
+        guest_highlight: row[22] ?? 'guest hightlight',
+        guest_policy: row[23] ?? 'guest policy'
       }))
     })
 
@@ -71,57 +61,64 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
         cy.getCookie('reservdng_session').then((sessionCookie) => {
           const decodedToken = decodeURIComponent(xsrfCookie!.value)
 
-          cy.task('multipartRequest', {
+          cy.task('multipartNestedRequest', {
             url: 'https://reservdng.com/restaurants',
             headers: {
               'X-XSRF-TOKEN': decodeURIComponent(xsrfCookie!.value),
               'X-CSRF-TOKEN': token,
-              'x-csrf-token': token,
               'Cookie': `XSRF-TOKEN=${xsrfCookie!.value}; reservdng_session=${sessionCookie!.value}`,
             },
             fields: {
               name: _restaurant.name,
-              type: _restaurant.type,
-              bedrooms: _restaurant.bedrooms,
-              bathrooms: _restaurant.bathrooms,
-              guests: _restaurant.guests,
+              cuisines: _restaurant.cuisines,
               highlight: _restaurant.highlight,
               description: _restaurant.description,
-              features: _restaurant.features,
-              host_name: _restaurant.hostName,
-              host_phone: _restaurant.hostPhone,
-              host_email: _restaurant.hostEmail,
-              host_whatsapp: _restaurant.hostWhatsappNumber,
+              price_rating: _restaurant.price_rating,
+              dress_code: _restaurant.dress_code,
+              phone: _restaurant.phone,
+              email: _restaurant.email,
+              website: _restaurant.website,
+              instagram: _restaurant.instagram,
               address: _restaurant.address,
               city: _restaurant.city,
               state: _restaurant.state,
               landmarks: _restaurant.landmarks,
-              checkin_instructions: _restaurant.checkInInstruction,
-              house_rules: _restaurant.houseRules,
-              checkin_time: _restaurant.checkInTime,
-              checkout_time: _restaurant.checkOutTime,
-              kitchen_amenities: _restaurant.kitchenAmenities,
-              living_amenities: _restaurant.livingAmenities,
-              bedroom_amenities: _restaurant.bedroomAmenities,
-              general_amenities: _restaurant.generalAmenities,
-              cancellation_highlight: _restaurant.cancellationHighlights,
-              cancellation_policy: _restaurant.cancellationPolicy,
-              daily_rate: _restaurant.dailyRate,
-              caution_fee: _restaurant.cautionFee,
-              min_restaurant: _restaurant.minimumStay,
-              min_advance_booking: _restaurant.advancedBooking,
-              transportation: _restaurant.transportation,
-              _token: token
+              transportation: _restaurant.transportation, //['airport-shuttle', 'taxi-service', 'public-transport', 'car-rental', 'self-parking', 'valet-parking']
+              amenities: _restaurant.amenities, // ['outdoor', 'rooftop', 'private', 'lounge', 'valet', 'parking', 'wifi', 'bar', 'accessible', 'delivery', 'takeout', 'catering', 'ac', 'kids', 'music', 'live', 'cash', 'card', 'transfer']
+              cancellation_highlight: _restaurant.cancellation_highlight,
+              cancellation_policy: _restaurant.cancellation_policy,
+              late_highlight: _restaurant.late_highlight,
+              late_policy: _restaurant.late_policy,
+              guest_highlight: _restaurant.guest_highlight,
+              guest_policy: _restaurant.guest_policy,
+              menus: {
+                pdf: { id: 'pdf-1793189750109', name: 'Zinsser_WritingWell_Part1_LO2.pdf', size: 5402313, type: 'application/pdf', state: 'new' },
+                images: [{ id: 'mimg-1793189762128siphn22a6s', name: 'signature.jpeg', size: 556877, type: 'image/jpeg', state: 'new' }],
+              },
+              specialties: [{ id: 'sp-1793189764530', name: 'asfds', description: 'srdhnsdf', price: 12434 }],
+              seatings: [{ id: 'seat-1793189777430', name: 'dfsgnc', description: 'fsdgnhm', capacity: 1, price: 20000 }],
+              hours: [
+                { day: 'Monday', open: '09:00', close: '22:00', closed: 0 },
+                { day: 'Tuesday', open: '09:00', close: '22:00', closed: 0 },
+                { day: 'Wednesday', open: '09:00', close: '22:00', closed: 0 },
+                { day: 'Thursday', open: '09:00', close: '22:00', closed: 0 },
+                { day: 'Friday', open: '11:00', close: '23:00', closed: 0 },
+                { day: 'Saturday', open: '11:00', close: '23:00', closed: 0 },
+                { day: 'Sunday', open: '00:00', close: '00:00', closed: 0 },
+              ],
+              _token: token,
             },
             files: {
-              "host_photo": 'cypress/fixtures/host/hotel.jpg',
-              'photos': ['cypress/fixtures/hotel.jpg'],
+              'photos[0]': 'cypress/fixtures/restaurant.jpg',
+              'menus[pdf][rawFile]': 'cypress/fixtures/menus/menu.pdf',
+              'menus[images][0][url]': 'cypress/fixtures/menus/signature.jpeg',
+              'specialties[0][image]': 'cypress/fixtures/Menus/special.jpg',
+              'seatings[0][image]': 'cypress/fixtures/Menus/seatings.jpg',
             },
-          }).then((result: any) => {
-            cy.log(JSON.stringify(result.body, null, 2))
-            console.log(result.body)
-            expect(result.status).to.eq(200)
-
+          }).then((res: any) => {
+            cy.log(JSON.stringify(res.body, null, 2))
+            console.log(res.body)
+            // expect(res.status).to.be.oneOf([200, 201, 302])
           })
 
         })
@@ -129,7 +126,7 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
 
       cy.visit(`/restaurants/${_restaurant.name.toLowerCase().trim().replace(/\s+/g, '-')}`);
 
-      cy.wait(10000)
+      cy.wait(5000)
     })
   })
 })

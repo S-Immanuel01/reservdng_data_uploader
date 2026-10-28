@@ -25,6 +25,25 @@ interface SaveFixtureArgs {
   data: any;
 }
 
+const flattenToBracketKeys = (
+  value: any,
+  prefix = '',
+  out: Record<string, string> = {}
+): Record<string, string> => {
+  if (value === null || value === undefined) return out // binary placeholders / unset values
+
+  if (Array.isArray(value)) {
+    value.forEach((v, i) => flattenToBracketKeys(v, `${prefix}[${i}]`, out))
+  } else if (typeof value === 'object') {
+    Object.entries(value).forEach(([k, v]) =>
+      flattenToBracketKeys(v, prefix ? `${prefix}[${k}]` : k, out)
+    )
+  } else {
+    out[prefix] = String(value) // keeps "" for empty strings, 0 for closed, etc.
+  }
+  return out
+}
+
 export default defineConfig({
   pageLoadTimeout: 90000,
   e2e: {
@@ -36,6 +55,48 @@ export default defineConfig({
       PASSWORD: process.env.PASSWORD
     },
     setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) {
+      on('task', {
+        async multipartNestedRequest({ url, fields = {}, files = {}, headers = {}, cookies = {} }) {
+          const form = new FormData()
+
+          // text fields -> bracket-style keys, e.g. menus[pdf][id], hours[0][day], cuisines[0]
+          Object.entries(flattenToBracketKeys(fields)).forEach(([key, value]) => {
+            form.append(key, value)
+          })
+
+          // file fields -> key is used exactly as given: 'menus[pdf][rawFile]': 'path/to/file'
+          // an array of paths is expanded to key[0], key[1], ...
+          Object.entries(files).forEach(([key, value]) => {
+            const paths = (Array.isArray(value) ? value : [value]) as string[]
+            paths.forEach((p, i) => {
+              if (!fs.existsSync(p)) throw new Error(`File not found: ${p}`)
+              const fieldName = Array.isArray(value) ? `${key}[${i}]` : key
+              form.append(fieldName, fs.createReadStream(p))
+            })
+          })
+
+          const cookieHeader = Object.entries(cookies as Record<string, string>)
+            .map(([k, v]) => `${k}=${v}`)
+            .join('; ')
+
+          try {
+            const response = await axios.post(url, form, {
+              headers: {
+                ...form.getHeaders(),
+                ...headers,
+                ...(cookieHeader ? { Cookie: cookieHeader } : {}),
+              },
+              validateStatus: () => true,
+              maxBodyLength: Infinity,
+              maxContentLength: Infinity,
+            })
+            return { status: response.status, body: response.data }
+          } catch (err: any) {
+            return { status: err.response?.status ?? 500, body: err.response?.data ?? err.message }
+          }
+        },
+      })
+
       on('task', {
         async multipartRequest({ url, fields, files, headers = {}, cookies = {} }) {
           const form = new FormData()
