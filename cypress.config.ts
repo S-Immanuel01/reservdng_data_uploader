@@ -54,6 +54,7 @@ export default defineConfig({
       EMAIL: process.env.EMAIL,
       PASSWORD: process.env.PASSWORD
     },
+
     setupNodeEvents(on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) {
       on('task', {
         async multipartNestedRequest({ url, fields = {}, files = {}, headers = {}, cookies = {} }) {
@@ -233,6 +234,7 @@ export default defineConfig({
           config.env[key] = process.env[key];
         });
       }
+
 
       return config;
     },

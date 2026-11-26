@@ -2,7 +2,7 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
   const url = 'https://docs.google.com/spreadsheets/d/1FmQj0-Mj8lXgoQlFfsX2aQG9rkn5Pk6EkB3HAUYj4hM/edit?gid=794979234#gid=794979234'
 
   const range = {
-    'start': 10,
+    'start': 1,
     'end': 10
   }
 
@@ -50,12 +50,26 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
 
   })
 
+  beforeEach(() => {
+    Cypress.on('uncaught:exception', (err) => {
+      if (err.message.includes("reading 'replace'")) {
+        return false; // don't fail the test
+      }
+    });
+  })
+
   it('UPLOADS ALL restaurants', () => {
     cy.wrap(restaurants).each((_restaurant: any) => {
       cy.visit('/restaurants/create')
       cy.get('input[name="_token"]').invoke('val').then((value) => {
         token = value?.toString() ?? ''
       })
+
+      // ensure the restaurant website url is valid
+      const urlRegex = /^https?:\/\/(www\.)?([a-z0-9-]+\.)+[a-z]{2,}(:\d{2,5})?(\/\S*)?$/i;
+
+      const website = _restaurant.website?.trim() ?? '';
+      const isValidUrl = urlRegex.test(website);
 
       cy.getCookie('XSRF-TOKEN').then((xsrfCookie) => {
         cy.getCookie('reservdng_session').then((sessionCookie) => {
@@ -77,14 +91,14 @@ describe('RESERVDNG RESTAURANTS UPLOAD', { testIsolation: false }, () => {
               dress_code: _restaurant.dress_code,
               phone: _restaurant.phone,
               email: _restaurant.email,
-              website: _restaurant.website,
+              website: isValidUrl ? _restaurant.website : "",
               instagram: _restaurant.instagram,
               address: _restaurant.address,
               city: _restaurant.city,
               state: _restaurant.state,
               landmarks: _restaurant.landmarks,
               transportation: _restaurant.transportation, //['airport-shuttle', 'taxi-service', 'public-transport', 'car-rental', 'self-parking', 'valet-parking']
-              amenities: _restaurant.amenities, // ['outdoor', 'rooftop', 'private', 'lounge', 'valet', 'parking', 'wifi', 'bar', 'accessible', 'delivery', 'takeout', 'catering', 'ac', 'kids', 'music', 'live', 'cash', 'card', 'transfer']
+              amenities: _restaurant.amenities, // ['', 'rooftop', 'private', 'lounge', 'valet', 'parking', 'wifi', 'bar', 'accessible', 'delivery', 'takeout', 'catering', 'ac', 'kids', 'music', 'live', 'cash', 'card', 'transfer']
               cancellation_highlight: _restaurant.cancellation_highlight,
               cancellation_policy: _restaurant.cancellation_policy,
               late_highlight: _restaurant.late_highlight,
