@@ -1,3 +1,7 @@
 /node_modules
+<<<<<<< HEAD
 config.env
 cypress/fixtures
+=======
+.env
+>>>>>>> 13f96b539b8f837eb9d28e538f18c4cda6f2b46f
