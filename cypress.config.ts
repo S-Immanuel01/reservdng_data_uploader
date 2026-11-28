@@ -220,6 +220,17 @@ export default defineConfig({
           return imagePaths;
         },
 
+        getFolderNames(subPath = '') {
+          const dir = path.join(config.fixturesFolder || 'cypress/fixtures', subPath);
+
+          if (!fs.existsSync(dir)) return [];
+
+          return fs
+            .readdirSync(dir, { withFileTypes: true })
+            .filter((entry) => entry.isDirectory())
+            .map((entry) => entry.name);
+        },
+
         saveFixture({ filename, data }: SaveFixtureArgs) {
           // Reuses the ES imports from the top of the file
           const filePath = path.join(__dirname, 'cypress', 'fixtures', filename);
